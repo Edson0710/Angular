@@ -1,4 +1,5 @@
 export class Zapatilla{
+    /*
     public nombre:string;
     public marca:string;
     public color:string;
@@ -12,4 +13,14 @@ export class Zapatilla{
         this.precio = precio;
         this.stock = stock;
     }
+    */
+
+    constructor(
+        public nombre:string,
+        public marca:string,
+        public color:string,
+        public precio:number,
+        public stock:boolean
+    ){}
+
 }
