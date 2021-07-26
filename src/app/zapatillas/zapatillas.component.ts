@@ -1,3 +1,4 @@
+import { ThrowStmt } from "@angular/compiler";
 import { Component, OnInit } from "@angular/core";
 import { Zapatilla } from "../models/zapatilla";
 
@@ -18,7 +19,8 @@ export class ZapatillasComponent implements OnInit{
             new Zapatilla('Reebok Classic', 'Reebok', 'blanco', 80, true),
             new Zapatilla('jordan 1', 'Nike', 'negras', 60, true),
             new Zapatilla('Airforce', 'Nike', 'negras', 70, true),
-            new Zapatilla('forum', 'Adidas', 'rosa', 180, false)
+            new Zapatilla('forum', 'Adidas', 'rosa', 180, false),
+            new Zapatilla('Valerianas', 'Valeria', 'Amarillas', 70, false)
         ];
     }
 
@@ -43,5 +45,18 @@ export class ZapatillasComponent implements OnInit{
 
     addMarca(){
         this.marcas.push(this.mi_marca);
+    }
+
+    borrarMarca(index:number){
+        // delete this.marcas[index];
+        this.marcas.splice(index, 1);
+    }
+
+    onBlur(){
+        console.log("Has salido del input");
+    }
+
+    mostrarPalabra(){
+        alert(this.mi_marca);
     }
 }
