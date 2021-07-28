@@ -11,3 +11,18 @@
 .subrayado{
     text-decoration: underline;
 }
+
+.active{
+    background: red;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

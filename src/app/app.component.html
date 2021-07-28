@@ -162,17 +162,6 @@
     z-index: -10;
   }
 
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #125699;
-  }
-
   .terminal {
     position: relative;
     width: 80%;
@@ -358,8 +347,15 @@
 
   <p>{{descripcion}}</p>
 
+  <nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a> &nbsp;
+    <a [routerLink]="['/zapatillas']" [routerLinkActive]="['active']">Zapatillas</a>&nbsp;
+    <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>&nbsp;
+    <a [routerLink]="['/videojuego']" [routerLinkActive]="['active']">Videojuego</a>&nbsp;
+  </nav>
+  <div [style] = "{background: 'red', height: '2px', width: '100%'}"></div>
   <!-- <videojuego *ngIf="mostrar_videojuegos"></videojuego> -->
-  <zapatillas></zapatillas>
+  <!-- <zapatillas></zapatillas> -->
 
   <!-- <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar</button>
   <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar</button>
@@ -367,7 +363,7 @@
   <cursos></cursos> -->
 
 
-
+  <router-outlet></router-outlet>
 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -378,4 +374,4 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<router-outlet></router-outlet>
+
